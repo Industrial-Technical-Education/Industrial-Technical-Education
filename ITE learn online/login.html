@@ -236,6 +236,8 @@ button:hover{
         let webPassword3 = 'Esosa@123';   
         let webEmail4 = 'Oronsayerichard24@gmail.com';
         let webPassword4 = 'Richard@123';    
+        let webEmailsam = 'ubarusamuel9@gmail.com';
+        let webPasswordsam = 'Samuel@123';
 
         let logEmail1 = document.getElementById('Emaillog');
         let logPassword1 = document.getElementById('passwordlog');
@@ -318,6 +320,23 @@ button:hover{
             logPassword1.value = ''
         }
         else if ( logEmail != webEmail4 && logPassword == webPassword4 ){
+            alert('non-user ' + logEmail + ' you dont have an account please signup');
+            window.location = '#su'
+            textshowLogin.innerHTML = 'Not registered ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+            else if ( logEmail == webEmailsam && logPassword == webPasswordsam ){
+            alert('welcome ' + logEmail + ' press [ok] to continue')
+            window.location = 'C:/Users/fortune/Desktop/ITE learn online/home.html';
+        }
+        else if ( logEmail == webEmailsam && logPassword != webPasswordsam ){
+            alert('user '+ logEmail + ' check your password and try again')
+            textshowLogin.innerHTML = 'Wrong password ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail != webEmailsam && logPassword == webPasswordsam ){
             alert('non-user ' + logEmail + ' you dont have an account please signup');
             window.location = '#su'
             textshowLogin.innerHTML = 'Not registered ' + logEmail
