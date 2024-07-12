@@ -231,7 +231,11 @@ button:hover{
         let webEmail = 'fortuneisrael41@gmail.com';
         let webPassword = 'Connect@123';
         let webEmail2 = 'nattyblinks@gmail.com';
-        let webPassword2 = 'Nathan@123';        
+        let webPassword2 = 'Nathan@123';   
+        let webEmail3 = 'Ehigiamusoeesosa7878@gmail.com';
+        let webPassword3 = 'Esosa@123';   
+        let webEmail4 = 'Oronsayerichard24@gmail.com';
+        let webPassword4 = 'Richard@123';    
 
         let logEmail1 = document.getElementById('Emaillog');
         let logPassword1 = document.getElementById('passwordlog');
@@ -278,11 +282,45 @@ button:hover{
             logEmail1.value = ''
             logPassword1.value = ''
         }
+        else if ( logEmail == webEmail3 && logPassword == webPassword3 ){
+            alert('welcome ' + logEmail + ' press [ok] to continue')
+            window.location = 'https://industrial-technical-education.github.io/Industrial-Technical-Education/ITE%20learn%20online/home.html';
+        }
+        else if ( logEmail == webEmail3 && logPassword != webPassword3 ){
+            alert('user '+ logEmail + ' check your password and try again')
+            textshowLogin.innerHTML = 'Wrong password ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail != webEmail3 && logPassword == webPassword3 ){
+            alert('non-user ' + logEmail + ' you dont have an account please signup');
+            window.location = '#su'
+            textshowLogin.innerHTML = 'Not registered ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
         else if ( logEmail == "" && logPassword == "" ){
             logEmail1.style.border = '2px solid red'
             logPassword1.style.border = '2px solid red'
             alert('Field cannot be empty');      
             textshowLogin.innerHTML = 'empty field'   
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail == webEmail4 && logPassword == webPassword4 ){
+            alert('welcome ' + logEmail + ' press [ok] to continue')
+            window.location = 'https://industrial-technical-education.github.io/Industrial-Technical-Education/ITE%20learn%20online/home.html';
+        }
+        else if ( logEmail == webEmail4 && logPassword != webPassword4 ){
+            alert('user '+ logEmail + ' check your password and try again')
+            textshowLogin.innerHTML = 'Wrong password ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail != webEmail4 && logPassword == webPassword4 ){
+            alert('non-user ' + logEmail + ' you dont have an account please signup');
+            window.location = '#su'
+            textshowLogin.innerHTML = 'Not registered ' + logEmail
             logEmail1.value = ''
             logPassword1.value = ''
         }
