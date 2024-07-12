@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        *{
+    margin: 0;
+    padding: 0;
+}
+#body{
+    margin-top: 0;
+    display: block;
+    justify-content: center;
+    width: 350px;
+    text-align: left;
+    margin-top: 70px;
+    font-family: verdana;
+}
+#bodysignup{
+    margin-top: 0;
+    display: none;
+    justify-content: center;
+    width: 350px;
+    text-align: left;
+    margin-top: 70px;
+    font-family: verdana;
+    margin-bottom: 50vh;
+}
+body{
+    background-size: cover;
+    background: white;
+    margin-bottom: 80px;
+    scroll-snap-align: start;
+}
+#head{
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#p{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+p{
+    color: black;
+    font-family: arial;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+input{
+    width: 90%;
+    height: 45px;
+    margin-bottom: 30px;
+    border: .2px solid grey;
+    border-radius: 10px;
+    transition:all .3s ease-out;
+    transition-duration: 3s;
+    padding-left: 30px;
+}
+input:hover{
+    border: 2px solid blue;
+    font-weight: bold;
+}
+input::placeholder{
+    font-size: 15px;
+}
+#textshowLogin{
+    text-align: center;
+    color: red;
+    font-style: italic;
+    padding-top: 30px;
+}
+#textshowLogin1{
+    text-align: center;
+    color: red;
+    font-style: italic;
+    padding-top: 30px;
+}
+input:active{
+    border: 2px solid green;
+}
+a{
+    color: black;
+    font-weight: bold;
+    font-family: arial;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    transition-duration: 2s;
+}
+.a{
+    color: black;
+    font-weight: bold;
+    font-family: arial;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    transition-duration: 2s;
+    background: white;
+    width: 20px;
+    margin-bottom: 40px;
+}
+a:hover{
+    color: blue;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background: black;
+    text-shadow: 1px 1px 1px white;
+    font-family: arial;
+    border: 1px solid black;
+    transition: all .3s ease;
+    border-radius: 10px;
+}
+button:hover{
+    border: 2px solid blue;
+}
+.button{
+    width: 100%;
+    background-image: url(buttoni.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    transition: all .2s ease;
+    transition-duration: 2s;
+    transition-timing-function: .2s;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.button:hover{
+    background-image: url(button.JPG);
+    background-color: black;
+}
+@media(max-length: 560px){
+    #body{
+        width: 80%;
+    }    
+    #head{
+        font-size: 20px;
+    }
+
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+<div id="body">
+    <div id="head">
+        Welcome back
+    </div>
+    <div id="p">
+        Welcome back! Please enter your details.
+    </div>
+    <div id="form">
+        <form action="">
+            <p>Email</p>
+            <input type="email" id="Emaillog" placeholder="Enter your email" required><br>
+            <p>Password</p>
+            <input type="password" id="passwordlog" placeholder="Password" required><br>
+            <a href="">Forgot Password</a><br>
+            <button type="button" onclick="loGin()">
+                Login
+            </button>
+            <p id="textshowLogin"></p>
+            <button class="button"></button><br>
+            <div class="signup" id="su">
+                Don't have an account? <button id="a" onclick="apple()">Signup for free</button>
+            </div>
+        </form>
+    </div>
+</div>
+</center>
+<center>
+    <div id="bodysignup">
+        <div id="head">
+            Welcome back
+        </div>
+        <div id="p">
+            Welcome back! Please enter your details.
+        </div>
+        <div id="form">
+            <form action="">
+                <p>Full Name</p>
+                <input type="text" id="signuser" placeholder="Enter your Full name" required><br>
+                <p>Email</p>
+                <input type="email" placeholder=" Enter your email" required><br>
+                <p>Matric Number</p>
+                <input type="text" placeholder="Matriculation number" required><br>
+                <p>Password</p>
+                <input type="password" id="normalp" placeholder="Enter a strong password" required><br>
+                <p>Confirm Password</p>
+                <input type="password" id="confirmp" placeholder="Confirm your password" required><br>
+                <button type="button" onclick="signUp()">
+                    Signup
+                </button>
+                <p id="textshowLogin1"></p>
+                <button class="button"></button><br>
+                <div class="signup">
+                    Already have an account? <button onclick="Apple()">Login Here</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </center>
+<script type="text/javascript">
+    function apple(){
+        let signupbody = document.getElementById('bodysignup');
+        let signupclose = document.getElementById('body');
+
+        signupbody.style.display = 'block';
+        signupclose.style.display = 'none'
+    }
+    function Apple(){
+        let signupbody = document.getElementById('bodysignup');
+        let signupclose = document.getElementById('body');
+
+        signupbody.style.display = 'none';
+        signupclose.style.display = 'block'
+    }
+    function loGin(){
+        let logEmail = document.getElementById('Emaillog').value;
+        let logPassword = document.getElementById('passwordlog').value;
+        let textshowLogin = document.getElementById('textshowLogin');
+
+        let webEmail = 'fortuneisrael41@gmail.com';
+        let webPassword = 'Connect@123';
+        let webEmail2 = 'nattyblinks@gmail.com';
+        let webPassword2 = 'Nathan@123';        
+
+        let logEmail1 = document.getElementById('Emaillog');
+        let logPassword1 = document.getElementById('passwordlog');
+
+        if ( logEmail == webEmail2 && logPassword == webPassword2 ){
+            alert('welcome ' + logEmail + ' press [ok] to continue')
+            window.location = 'C:/Users/fortune/Desktop/ITE learn online/home.html';
+        }
+        else if ( logEmail == webEmail2 && logPassword != webPassword2 ){
+            alert('user '+ logEmail + ' check your password and try again')
+            textshowLogin.innerHTML = 'Wrong password ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail != webEmail2 && logPassword == webPassword2 ){
+            alert('non-user ' + logEmail + ' you dont have an account please signup');
+            window.location = '#su'
+            textshowLogin.innerHTML = 'Not registered ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail == "" && logPassword == "" ){
+            logEmail1.style.border = '2px solid red'
+            logPassword1.style.border = '2px solid red'
+            alert('Field cannot be empty');      
+            textshowLogin.innerHTML = 'empty field'   
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail == webEmail && logPassword == webPassword ){
+            alert('welcome ' + logEmail + ' press [ok] to continue')
+            window.location = 'C:/Users/fortune/Desktop/ITE learn online/home.html';
+        }
+        else if ( logEmail == webEmail && logPassword != webPassword ){
+            alert('user '+ logEmail + ' check your password and try again')
+            textshowLogin.innerHTML = 'Wrong password ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail != webEmail && logPassword == webPassword ){
+            alert('non-user ' + logEmail + ' you dont have an account please signup');
+            window.location = '#su'
+            textshowLogin.innerHTML = 'Not registered ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else if ( logEmail == "" && logPassword == "" ){
+            logEmail1.style.border = '2px solid red'
+            logPassword1.style.border = '2px solid red'
+            alert('Field cannot be empty');      
+            textshowLogin.innerHTML = 'empty field'   
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+        else{
+            logEmail.reset
+            logPassword.reset
+            alert('Wrong credential for Ite students only')
+            textshowLogin.innerHTML = 'Not an ITE student ' + logEmail
+            logEmail1.value = ''
+            logPassword1.value = ''
+        }
+    }
+    function signUp(){
+        let passwordsign = document.getElementById('normalp').value;
+        let confirmsign = document.getElementById('confirmp').value;
+        let userS = document.getElementById('signuser').value;
+        let passwordsign1 = document.getElementById('normalp');
+        let confirmsign1 = document.getElementById('confirmp');
+        let textshowLogin = document.getElementById('textshowLogin1');
+
+        if ( passwordsign == confirmsign ){
+            window.location = 'Login.css'
+        }
+        else{
+            alert('Dear ' + userS + ' Passwords dont match please try again')
+            passwordsign1.style.border = '2px solid red'
+            confirmsign1.style.border = '2px solid red'
+            textshowLogin.innerHTML = 'Passwords dont match ' + userS
+        }
+    }
+
+</script>
+</body>
+</html>

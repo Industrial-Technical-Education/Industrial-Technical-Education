@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <STYle type="text/css">
+        body{
+            background: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            font-weight: bold;
+            font-family: arial;
+        }
+        button{
+            width: 80%;
+            height: max-content;
+            font-size: 30px;
+            margin: 10px;
+            color: transparent;
+            background-image: linear-gradient(white,white,grey,white);
+            background-clip: text;
+            padding: 20px;
+            background-color: blue;
+            border-radius: 30px;
+            font-weight: bolder;
+            border: 3px solid white;
+        }
+        button:hover{
+            background: white;
+            color: black;
+        }
+        li{
+            list-style: none;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            padding: 30px;
+            font-size: 40px;
+            background: linear-gradient(orange,orange,yellow);
+            background-clip: text;
+            color: transparent;
+        }
+        .buttons{
+            display: none;
+        }
+        #closecourse{
+            display: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div>
+        <div class="h1">
+            <h1>ITE</h1> 
+        </div>
+    </div>
+    <center>
+        <button onclick="course()" id="hideit">What Course do you want to study Today</button>
+        <button onclick="courseclose()" id="closecourse">Close</button>
+        <div class="buttons" id="buttons">
+            <li><button onclick="Edu()">EDU 111</button></li>
+            <li><button onclick="Gst()">GST</button></li>
+            <li><button onclick="Csc()">CSC 101</button></li>
+            <li><button onclick="Mth()">MTH 101</button></li>
+            <li><button onclick="Bud()">BUD 111</button></li>
+            <li><button onclick="Aut()">AUT 111</button></li>
+            <li><button onclick="Eet()">EET 111</button></li>
+            <li><button onclick="Mwt()">MWT 111</button></li>
+            <li><button onclick="Wwt()">WWT 111</button></li>
+            <li><button onclick="Tcd()">TCD 111</button></li>
+            <li><button onclick="Ite()">ITE 111</button></li>
+        </div>
+        <li><button onclick="home()">GO HOME</button></li>
+    </center>
+<script>
+    const bodyshow = document.getElementById('body');
+    const buttonshow = document.getElementById('buttons');
+    const closeit = document.getElementById('closecourse');
+    const hideit = document.getElementById('hideit');
+
+
+
+    function course(){
+        buttonshow.style.display = 'block'
+        bodyshow.style.height = 'max-content'
+        closeit.style.display = 'block'
+        hideit.style.display = 'none'
+    }
+    function courseclose(){
+        buttonshow.style.display = 'none'
+        bodyshow.style.height = '100vh'
+        closeit.style.display = 'none'
+        hideit.style.display = 'block'
+    }
+    function home(){
+        window.location = 'home.html'
+    }
+</script>
+</body>
+</html>
