@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        input{
+            height: 40px;
+            width: 90%;
+        }
+        .two{
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+        }
+        .downfixed{
+            background: white;
+            width: 280px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            border-radius: 10px 10px 0 0;
+            margin-left: 0;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ::-webkit-scrollbar-thumb{
+            height: 10px;
+            width: 2px;
+            background-color: red;
+        }
+        ::-webkit-scrollbar-track{
+            color: aqua;
+            width: 3px;
+            height: 40px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; background-image: linear-gradient(115deg, red,brown,aqua,green);background-repeat: no-repeat;background-size: cover; display: inline-flex; flex-direction: column;height: 90vh; justify-content: space-between; align-items: center; width: 100%;">
+    <div class="h1" style="font-weight: bold; margin-top: 20px;">
+    <p1 style="border-radius: 15px; box-shadow: 3px 3px 5px yellow; font-family: cambria; font-weight: bolder; font-size: 40px; font-style: oblique; font-family: arial; color: transparent;background: linear-gradient(-23deg,green,green,blue,aqua,green,green);background-clip: text;width: max-content; padding-right: 10px;">ITE CHAT</p1></div>
+    <div class="topmovable" style="overflow: auto; height: 90vh; scroll-snap-type: y mandatory;">
+    <p id="messagesent" style="text-shadow: 4px 4px 6px orange; word-wrap: break-word; scroll-snap-align: end; color: yellow; background-color: transparent; font-size: 20px; margin: 10px; font-weight: bolder;font-style: italic; font-family: cambria; width: 250px;"></p>
+        <div class="other" style="scroll-snap-align: end;"></div>
+    </div><div class="downfixed"><div class="two"><input type="text" name="" id="messagetyped">
+    <button id="send">Send</button></div><br>
+    <button onclick="clearit()">clear all chat</button></div>
+<script>
+    const messagesent = document.getElementById('messagesent');
+    const messagetyped = document.getElementById('messagetyped');
+    const send = document.getElementById('send');
+    const messagetypedvalue = messagetyped.value;
+    const inputs = [];
+    window.addEventListener('load', () => {
+        const saved = localStorage.getItem('message');
+        if(saved){
+            messagetyped.value = saved;
+            messagesent.innerHTML = saved;
+            messagetyped.value = inputs.join('\n');
+        }
+        localStorage.setItem('message1',JSON.parse(saved));
+    })
+    send.addEventListener('click', () => {
+        const local = localStorage.getItem('message1') + messagetyped.value + '<br/><br/>';
+        inputs.push(local);
+        localStorage.setItem('message', JSON.stringify(inputs));
+        messagesent.innerHTML = localStorage.getItem('message');
+        messagetyped.value = '';
+        window.location = 'index.html'
+    })
+    function clearit(){
+        localStorage.removeItem('message');
+        window.location = 'index.html'
+    }
+</script>
+</body>
+</html>
