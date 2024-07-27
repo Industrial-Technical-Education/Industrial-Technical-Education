@@ -1,82 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        input{
-            height: 40px;
-            width: 90%;
-        }
-        .two{
-            display: flex;
-            justify-content: space-between;
-            width: 250px;
-        }
-        .downfixed{
-            background: white;
-            width: 280px;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            height: 150px;
-            border-radius: 10px 10px 0 0;
-            margin-left: 0;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        ::-webkit-scrollbar-thumb{
-            height: 10px;
-            width: 2px;
-            background-color: red;
-        }
-        ::-webkit-scrollbar-track{
-            color: aqua;
-            width: 3px;
-            height: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="izzytech.jpg" style="border-radius: 100%;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test area</title>
 </head>
-<body style="background-color: black; background-image: linear-gradient(115deg, red,brown,aqua,green);background-repeat: no-repeat;background-size: cover; display: inline-flex; flex-direction: column;height: 90vh; justify-content: space-between; align-items: center; width: 100%;">
-    <div class="h1" style="font-weight: bold; margin-top: 20px;">
-    <p1 style="border-radius: 15px; box-shadow: 3px 3px 5px yellow; font-family: cambria; font-weight: bolder; font-size: 40px; font-style: oblique; font-family: arial; color: transparent;background: linear-gradient(-23deg,green,green,blue,aqua,green,green);background-clip: text;width: max-content; padding-right: 10px;">ITE CHAT</p1></div>
-    <div class="topmovable" style="overflow: auto; height: 90vh; scroll-snap-type: y mandatory;">
-    <p id="messagesent" style="text-shadow: 4px 4px 6px orange; word-wrap: break-word; scroll-snap-align: end; color: yellow; background-color: transparent; font-size: 20px; margin: 10px; font-weight: bolder;font-style: italic; font-family: cambria; width: 250px;"></p>
-        <div class="other" style="scroll-snap-align: end;"></div>
-    </div><div class="downfixed"><div class="two"><input type="text" name="" id="messagetyped">
-    <button id="send">Send</button></div><br>
-    <button onclick="clearit()">clear all chat</button></div>
-<script>
-    const messagesent = document.getElementById('messagesent');
-    const messagetyped = document.getElementById('messagetyped');
-    const send = document.getElementById('send');
-    const messagetypedvalue = messagetyped.value;
-    const inputs = [];
-    window.addEventListener('load', () => {
-        const saved = localStorage.getItem('message');
-        if(saved){
-            messagetyped.value = saved;
-            messagesent.innerHTML = saved;
-            messagetyped.value = inputs.join('\n');
-        }
-        localStorage.setItem('message1',JSON.parse(saved));
-    })
-    send.addEventListener('click', () => {
-        const local = localStorage.getItem('message1') + messagetyped.value + '<br/><hr/>';
-        inputs.push(local);
-        localStorage.setItem('message', JSON.stringify(inputs));
-        messagesent.innerHTML = localStorage.getItem('message');
-        messagetyped.value = '';
-        window.location = 'index.html'
-    })
-    function clearit(){
-        localStorage.removeItem('message');
-        window.location = 'index.html'
-    }
-</script>
+<body>
+    <center>
+        <div class="a">
+            <div id="firsti" >
+                <input type="text" name="" id="first" placeholder="0">
+            </div>
+            <div class="build">
+                <button id="AC">AC</button>
+                <button id="plusminus">+/-</button>
+                <button id="dividepl">%</button>
+                <button id="divide">&divide;</button><br>
+                <button id="seven">7</button>
+                <button id="eight">8</button>
+                <button id="nine">9</button>
+                <button id="multiply">&cross;</button><br>
+                <button id="four">4</button>
+                <button id="five">5</button>
+                <button id="six">6</button>
+                <button id="minus">-</button><br>
+                <button id="one">1</button>
+                <button id="two">2</button>
+                <button id="three">3</button>
+                <button id="plus">+</button><br>
+                <button id="zero">0</button>
+                <button id="nthundred">00</button>
+                <button id="point">.</button>
+                <button id="equals">=</button>
+            </div>
+        </div>
+        <div class="b">
+            <div id="firsti" >
+                <input type="text" name="" id="firstp"  placeholder="0">
+            </div>
+            <div class="build">
+                <button id="ACp">AC</button>
+                <button id="plusminusp">+/-</button>
+                <button id="dividepp">%</button>
+                <button id="dividep">&divide;</button><br>
+                <button id="sevenp">7</button>
+                <button id="eightp">8</button>
+                <button id="ninep">9</button>
+                <button id="multiplyp">&cross;</button><br>
+                <button id="fourp">4</button>
+                <button id="fivep">5</button>
+                <button id="sixp">6</button>
+                <button id="minusp">-</button><br>
+                <button id="onep">1</button>
+                <button id="twop">2</button>
+                <button id="threep">3</button>
+                <button id="plusp">+</button><br>
+                <button id="zerop">0</button>
+                <button id="nthundredp">00</button>
+                <button id="pointp">.</button>
+                <button id="equalsp">=</button>
+            </div>
+        </div>
+        <div class="c">
+            <div id="firsti" >
+                <input type="text" name="" id="firstt" placeholder="0">
+            </div>
+            <div class="build">
+                <button id="ACt">AC</button>
+                <button id="plusminust">+/-</button>
+                <button id="dividept">%</button>
+                <button id="dividet">&divide;</button><br>
+                <button id="sevent">7</button>
+                <button id="eightt">8</button>
+                <button id="ninet">9</button>
+                <button id="multiplyt">&cross;</button><br>
+                <button id="fourt">4</button>
+                <button id="fivet">5</button>
+                <button id="sixt">6</button>
+                <button id="minust">-</button><br>
+                <button id="onet">1</button>
+                <button id="twot">2</button>
+                <button id="threet">3</button>
+                <button id="plust">+</button><br>
+                <button id="zerot">0</button>
+                <button id="nthundredt">00</button>
+                <button id="pointt">.</button>
+                <button id="equalst">=</button>
+            </div>
+        </div>
+        <div class="d">
+            <div id="firsti" >
+                <input type="text" name="" id="firstd" placeholder="0">
+            </div>
+            <div class="build">
+                <button id="ACd">AC</button>
+                <button id="plusminusd">+/-</button>
+                <button id="dividepd">%</button>
+                <button id="divided">&divide;</button><br>
+                <button id="sevend">7</button>
+                <button id="eightd">8</button>
+                <button id="nined">9</button>
+                <button id="multiplyd">&cross;</button><br>
+                <button id="fourd">4</button>
+                <button id="fived">5</button>
+                <button id="sixd">6</button>
+                <button id="minusd">-</button><br>
+                <button id="oned">1</button>
+                <button id="twod">2</button>
+                <button id="threed">3</button>
+                <button id="plusd">+</button><br>
+                <button id="zerod">0</button>
+                <button id="nthundredd">00</button>
+                <button id="pointd">.</button>
+            <button id="equalsd">=</button>
+            </div>
+        </div>
+        <div class="e">
+            <div id="firsti" >
+                <input type="text" name="" id="firstm" placeholder="0">
+            </div>
+            <div class="build">
+                <button id="ACm">AC</button>
+                <button id="plusminusm">+/-</button>
+                <button id="dividepm">%</button>
+                <button id="dividem">&divide;</button><br>
+                <button id="sevenm">7</button>
+                <button id="eightm">8</button>
+                <button id="ninem">9</button>
+                <button id="multiplym">&cross;</button><br>
+                <button id="fourm">4</button>
+                <button id="fivem">5</button>
+                <button id="sixm">6</button>
+                <button id="minusm">-</button><br>
+                <button id="onem">1</button>
+                <button id="twom">2</button>
+                <button id="threem">3</button>
+                <button id="plusm">+</button><br>
+                <button id="zerom">0</button>
+                <button id="nthundredm">00</button>
+                <button id="pointm">.</button>
+                <button id="equalsm">=</button>
+            </div>
+        </div>
+    </center>
+<script src="app.js"></script>
 </body>
 </html>

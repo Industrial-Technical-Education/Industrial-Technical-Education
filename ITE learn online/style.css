@@ -1,0 +1,100 @@
+.a{
+    display: block;
+}
+.b,.c,.d,.e{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: black;
+    color: white;
+}
+input{
+    margin-top: 100px;
+    width: 335px;
+    height: max-content;
+    text-align: right;
+    background-color: black;
+    color: whitesmoke;
+    border: 0;
+    font-size: 80px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input::placeholder{
+    color: rgb(163, 161, 161);
+    font-size: 80px;
+    font-weight: bolder;
+}
+button{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    margin: 5px;
+    font-size: 30px;font-weight: bolder;
+    border: 0;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+#one,#two,#three,#four,#five,#six,#seven,#eight,#nine,#zero,#nthundred,#point{
+    background: rgb(71, 65, 65);
+    color: white;
+}
+#onet,#twot,#threet,#fourt,#fivet,#sixt,#sevent,#eightt,#ninet,#zerot,#nthundredt,#pointt{
+    background: rgb(71, 65, 65);
+    color: white;
+}
+#onep,#twop,#threep,#fourp,#fivep,#sixp,#sevenp,#eightp,#ninep,#zerop,#nthundredp,#pointp{
+    background: rgb(71, 65, 65);
+    color: white;
+}
+#oned,#twod,#threed,#fourd,#fived,#sixd,#sevend,#eightd,#nined,#zerod,#nthundredd,#pointd{
+    background: rgb(71, 65, 65);
+    color: white;
+}
+#onem,#twom,#threem,#fourm,#fivem,#sixm,#sevenm,#eightm,#ninem,#zerom,#nthundredm,#pointm{
+    background: rgb(71, 65, 65);
+    color: white;
+}
+#divide,#multiply,#plus,#minus,#equals{
+    background-color: orange;
+    color: white;
+}
+#dividet,#multiplyt,#plust,#minust,#equalst{
+    background-color: orange;
+    color: white;
+}
+#dividem,#multiplym,#plusm,#minusm,#equalsm{
+    background-color: orange;
+    color: white;
+}
+#divided,#multiplyd,#plusd,#minusd,#equalsd{
+    background-color: orange;
+    color: white;
+}
+#dividep,#multiplyp,#plusp,#minusp,#equalsp{
+    background-color: orange;
+    color: white;
+}
+.build{
+    margin-top: 100px;
+}
+@media (max-width: 300px) {
+    input{
+        width: 100%;
+        font-size: 50px;
+    }
+    input::placeholder{
+        font-size: 50px;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
